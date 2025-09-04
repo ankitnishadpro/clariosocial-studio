@@ -1,0 +1,37 @@
+🚀 NEW LEAD ALERT - ClarioSocial Studio
+===============================================
+
+HIGH PRIORITY LEAD - Website Contact Form Submission
+
+CONTACT INFORMATION:
+-------------------
+Full Name: {{from_name}}
+Email: {{from_email}}
+Business Name: {{business_name}}
+Business Type: {{business_type}}
+Monthly Revenue: {{monthly_revenue}}
+Referral Source: {{referral}}
+
+CURRENT CHALLENGE/GOAL:
+----------------------
+"{{challenge}}"
+
+RECOMMENDED NEXT STEPS:
+----------------------
+1. Respond within 4 hours during business hours
+2. Review their business type and revenue for package fit
+3. Schedule a 30-minute strategy session
+4. Prepare case studies relevant to their business type
+5. Research their current social media presence if possible
+
+LEAD QUALITY ASSESSMENT:
+-----------------------
+This inquiry came through our website contact form, indicating high intent. Their revenue range suggests they're a qualified prospect for our services.
+
+---
+ClarioSocial Studio
+Strategic Social Media Management for Online Businesses
+Email: hello@clariosocialstudio.in
+Website: www.clariosocialstudio.in
+
+This email was automatically generated from the ClarioSocial Studio website contact form.

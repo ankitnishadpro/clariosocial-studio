@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Lead from ClarioSocial Studio Website</title>
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            color: #2c3e50;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #2C5F8A 0%, #1e4a6b 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 10px 0 0;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .lead-info {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 15px;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #2C5F8A;
+            width: 140px;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+        .info-value {
+            flex: 1;
+            font-size: 14px;
+        }
+        .challenge-section {
+            background: #fef7cd;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .challenge-section h3 {
+            margin: 0 0 10px;
+            color: #92400e;
+            font-size: 16px;
+        }
+        .priority-badge {
+            display: inline-block;
+            background: #27AE60;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .next-steps {
+            background: #e0f2fe;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+        .next-steps h3 {
+            margin: 0 0 15px;
+            color: #0277bd;
+            font-size: 16px;
+        }
+        .next-steps ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .next-steps li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .footer {
+            background: #64748b;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .revenue-highlight {
+            font-weight: 600;
+            color: #059669;
+        }
+        @media (max-width: 600px) {
+            .info-row {
+                flex-direction: column;
+            }
+            .info-label {
+                width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🚀 New Lead Alert</h1>
+            <p>ClarioSocial Studio Website Inquiry</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="priority-badge">HIGH PRIORITY LEAD</div>
+            
+            <h2 style="margin: 0 0 10px; color: #1e293b; font-size: 18px;">Contact Information</h2>
+            <div class="lead-info">
+                <div class="info-row">
+                    <div class="info-label">Full Name:</div>
+                    <div class="info-value"><strong>{{from_name}}</strong></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Email Address:</div>
+                    <div class="info-value"><a href="mailto:{{from_email}}" style="color: #2C5F8A; text-decoration: none;">{{from_email}}</a></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Business Name:</div>
+                    <div class="info-value"><strong>{{business_name}}</strong></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Business Type:</div>
+                    <div class="info-value">{{business_type}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Monthly Revenue:</div>
+                    <div class="info-value revenue-highlight">{{monthly_revenue}}</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Referral Source:</div>
+                    <div class="info-value">{{referral}}</div>
+                </div>
+            </div>
+
+            <!-- Challenge Section -->
+            <div class="challenge-section">
+                <h3>🎯 Current Challenge/Goal</h3>
+                <p style="margin: 0; font-style: italic;">"{{challenge}}"</p>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="next-steps">
+                <h3>📋 Recommended Next Steps</h3>
+                <ol>
+                    <li><strong>Respond within 4 hours</strong> during business hours</li>
+                    <li>Review their business type and revenue for package fit</li>
+                    <li>Schedule a 30-minute strategy session</li>
+                    <li>Prepare case studies relevant to their business type</li>
+                    <li>Research their current social media presence if possible</li>
+                </ol>
+            </div>
+
+            <p style="margin-top: 25px; font-size: 14px; color: #64748b;">
+                <strong>Lead Quality:</strong> This inquiry came through our website contact form, indicating high intent. 
+                Their revenue range suggests they're a qualified prospect for our services.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p style="margin: 0 0 10px;"><strong>ClarioSocial Studio</strong></p>
+            <p style="margin: 0; opacity: 0.8;">
+                Strategic Social Media Management for Online Businesses<br>
+                <a href="mailto:hello@clariosocialstudio.in">hello@clariosocialstudio.in</a> | 
+                <a href="https://clariosocialstudio.in">www.clariosocialstudio.in</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
