@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Twitter } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -142,25 +142,24 @@ export default function Footer() {
               <h5 className="font-inter font-medium text-foreground mb-2 text-sm">Follow Us</h5>
               <div className="flex space-x-3">
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/company/clariosocial-studio/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-8 h-8 bg-muted hover:bg-primary transition-colors rounded-lg flex items-center justify-center group"
                   data-testid="social-linkedin"
+                  title="Follow us on LinkedIn"
                 >
                   <Linkedin className="w-4 h-4 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://instagram.com/clariosocial_studio" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-8 h-8 bg-muted hover:bg-primary transition-colors rounded-lg flex items-center justify-center group"
                   data-testid="social-instagram"
+                  title="Follow us on Instagram"
                 >
                   <Instagram className="w-4 h-4 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-8 h-8 bg-muted hover:bg-primary transition-colors rounded-lg flex items-center justify-center group"
-                  data-testid="social-twitter"
-                >
-                  <Twitter className="w-4 h-4 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
                 </a>
               </div>
             </div>
