@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import emailjs from '@emailjs/browser';
 import { insertContactSubmissionSchema, type InsertContactSubmission } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -29,29 +28,46 @@ export default function Contact() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContactSubmission) => {
-      return apiRequest("POST", "/api/contact", data);
-    },
-    onSuccess: () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (data: InsertContactSubmission) => {
+    setIsSubmitting(true);
+    
+    try {
+      // EmailJS configuration - these will be set as environment variables
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+      
+      const templateParams = {
+        from_name: data.fullName,
+        from_email: data.email,
+        business_name: data.businessName,
+        business_type: data.businessType,
+        monthly_revenue: data.monthlyRevenue,
+        challenge: data.challenge,
+        referral: data.referral || 'Not specified',
+        to_email: 'hello@clariosocialstudio.in',
+      };
+      
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
       setIsSubmitted(true);
       toast({
         title: "Thank you for your submission!",
         description: "We'll get back to you within 4 hours during business days.",
       });
       form.reset();
-    },
-    onError: (error: any) => {
+    } catch (error) {
+      console.error('EmailJS Error:', error);
       toast({
         title: "Submission failed",
-        description: error.message || "Please try again later.",
+        description: "Please try again later or contact us directly at hello@clariosocialstudio.in",
         variant: "destructive",
       });
-    },
-  });
-
-  const onSubmit = (data: InsertContactSubmission) => {
-    contactMutation.mutate(data);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -233,7 +249,7 @@ export default function Contact() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>How did you hear about us?</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <Select onValueChange={field.onChange} defaultValue={field.value || ""}>
                         <FormControl>
                           <SelectTrigger data-testid="select-referral">
                             <SelectValue placeholder="Select option (optional)" />
@@ -255,10 +271,10 @@ export default function Contact() {
                 <Button 
                   type="submit" 
                   className="w-full bg-accent text-accent-foreground py-4 text-lg font-semibold hover:bg-accent/90"
-                  disabled={contactMutation.isPending}
+                  disabled={isSubmitting}
                   data-testid="submit-contact-form"
                 >
-                  {contactMutation.isPending ? "Submitting..." : "Request Your Free Strategy Session"}
+                  {isSubmitting ? "Submitting..." : "Request Your Free Strategy Session"}
                 </Button>
               </form>
             </Form>

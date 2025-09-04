@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-muted-foreground text-sm mb-4">Strategic Social Media Management for Online Businesses</p>
-            <p className="text-muted-foreground text-xs">Founded 2024 | Based in India | Serving Global Online Businesses</p>
+            <p className="text-muted-foreground text-xs">Founded 2025 | Based in India | Serving Global Online Businesses</p>
           </div>
 
           {/* Quick Links */}
@@ -170,7 +170,7 @@ export default function Footer() {
         <div className="section-divider h-px my-8"></div>
 
         <div className="text-center text-xs text-muted-foreground">
-          <p data-testid="footer-copyright">© 2024 ClarioSocial Studio. All rights reserved.</p>
+          <p data-testid="footer-copyright">© 2025 ClarioSocial Studio. All rights reserved.</p>
           <p className="mt-1" data-testid="footer-disclaimer">
             Results may vary based on business model, market conditions, and implementation. We do not guarantee specific outcomes or results.
           </p>

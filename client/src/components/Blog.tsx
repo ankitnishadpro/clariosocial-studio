@@ -5,10 +5,10 @@ export default function Blog() {
     {
       icon: ShoppingBag,
       category: "E-commerce Guide",
-      title: "The Complete Guide to Social Media for E-commerce in 2024",
+      title: "The Complete Guide to Social Media for E-commerce in 2025",
       excerpt: "Everything you need to know about leveraging social media to drive e-commerce sales, from platform selection to conversion optimization.",
       readTime: "8 min read",
-      date: "January 15, 2024",
+      date: "January 15, 2025",
       color: "primary"
     },
     {
@@ -17,7 +17,7 @@ export default function Blog() {
       title: "How SaaS Companies Can Generate 50+ Leads Monthly Through LinkedIn",
       excerpt: "A step-by-step guide to using LinkedIn for B2B SaaS lead generation, including content strategies and outreach tactics.",
       readTime: "12 min read",
-      date: "January 10, 2024",
+      date: "January 10, 2025",
       color: "success"
     },
     {
@@ -26,7 +26,7 @@ export default function Blog() {
       title: "Building Authority: Personal Branding Strategy for Online Coaches",
       excerpt: "Learn how to establish yourself as a thought leader in your industry and attract premium clients through strategic personal branding.",
       readTime: "10 min read",
-      date: "January 5, 2024",
+      date: "January 5, 2025",
       color: "accent"
     },
     {
@@ -41,7 +41,7 @@ export default function Blog() {
     {
       icon: TrendingUp,
       category: "Platform Strategy",
-      title: "Platform Comparison: Where Should Your Online Business Focus in 2024?",
+      title: "Platform Comparison: Where Should Your Online Business Focus in 2025?",
       excerpt: "A comprehensive analysis of major social media platforms and which ones are most effective for different types of online businesses.",
       readTime: "15 min read",
       date: "December 20, 2023",
