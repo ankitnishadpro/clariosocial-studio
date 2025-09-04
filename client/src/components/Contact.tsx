@@ -34,10 +34,10 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      // EmailJS configuration - these will be set as environment variables
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_xm0zz1s';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_qpcvnw7';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'U7ZxazLgElLKJbAGh';
       
       const templateParams = {
         from_name: data.fullName,
