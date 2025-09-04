@@ -47,7 +47,9 @@ export default function Contact() {
         monthly_revenue: data.monthlyRevenue,
         challenge: data.challenge,
         referral: data.referral || 'Not specified',
+        to_name: 'ClarioSocial Studio',
         to_email: 'hello@clariosocialstudio.in',
+        reply_to: data.email,
       };
       
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
